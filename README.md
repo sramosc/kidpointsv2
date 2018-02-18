@@ -1,4 +1,4 @@
-# KidPoints
+# KidPoints (incomplete)
 
 Kidpoints is an open source project developed in SpringMVC. It's intended to motivate kids to gain points and rewards through good behaviour and good manners.  
 
