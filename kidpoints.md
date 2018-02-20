@@ -4,25 +4,34 @@
 
 ### WELCOME Page:
 From this screen, a new user should sign up in the application, and a existing user should login.
-There will be the usual text fields: 
+#### Form:
 * E-mail (text field) _required in SIGN UP_
 * Password (password field) _required in SIGN UP_
 * SIGN IN (button):  Redirects to main page if Ok. It will validate the user/pass against DB and will redirect to main page in case of success. Anyway, it will show a error message.
 * SIGN UP (button): Redirects to **SIGN IN** page.
 * FORGET YOUR PASSWORD (link): Redirects to **FORGET YOUR PASSWORD?** page.
+#### Validations
+##### SIGN IN
+* Blank field/s.
+* E-mail is not valid or doesn't exists in DB.
+* Password is incorrect.
     
 ### FORGET YOUR PASSWORD Page:
-A simple form:
+#### Form
 * E-mail (text) _required_
 * SUBMIT BUTTON: It will send an automatic e-mail to the user's e-mail with the stored password
 * RESET BUTTON: It'll erase data from the form.
 * GO BACK BUTTON: Redirects to **WELCOME** Page.
+
+#### FYP validations:
+* E-mail is blank, is not valid or doesn't exists in DB.
     
 ### SIGN UP Page: 
 There will be a new screen showing a form to fill with basic personal details:
 * Name (text)
 * Genre (F/M combo)    
 * Email (text)
+* ¿Additional data? (not really necessary)
 * Password (password)
 * Repeat password (password)
 * SUBMIT BUTTON: this will create a new temporary user in the DB with the data introduced, and it will send a confirmation email to the user with an activation link. This user's account won't be active until the link in the email is clicked.
