@@ -5,8 +5,7 @@
 This is a secured web application. An user has to login in order to get full access to the features.
 The first three pages (welcome, sign up and forget your password) are the only ones visible without authentication.
 
-### WELCOME Page:
-_UNAUTHENTICATED_
+### WELCOME Page (_UNAUTHENTICATED_):
 From this screen, a new user should sign up in the application, and a existing user should login.
 #### FORM:
 * E-mail (text field) _required in SIGN UP_
@@ -22,6 +21,7 @@ It will validate the user/pass against DB and will redirect to main page in case
 ###### Validations
 * Blank field/s.
 * E-mail is not valid or doesn't exists in DB.
+* E-mail exists, but the user is not yet active (registration email)
 * Password is incorrect.
 
 ##### SIGN UP
@@ -34,8 +34,7 @@ Redirects to **FORGET YOUR PASSWORD?** page.
 ###### Validations
 none
 
-### FORGET YOUR PASSWORD Page:
-_UNAUTHENTICATED_
+### FORGET YOUR PASSWORD Page (_UNAUTHENTICATED_):
 #### FORM
 * E-mail (text) _required_
 * SUBMIT BUTTON
@@ -55,19 +54,50 @@ Redirects to **WELCOME** Page.
 ###### Validations
 none
     
-### SIGN UP Page: 
-_UNAUTHENTICATED_
-There will be a new screen showing a form to fill with basic personal details:
+### SIGN UP Page (_UNAUTHENTICATED_): 
+#### FORM
 * Name (text)
 * Genre (F/M combo)    
 * Email (text)
 * ¿Additional data? (not really necessary)
 * Password (password)
 * Repeat password (password)
-* SUBMIT BUTTON: this will create a new temporary user in the DB with the data introduced, and it will send a confirmation email to the user with an activation link. This user's account won't be active until the link in the email is clicked.
+* SUBMIT BUTTON.
 * RESET BUTTON: simply erases the data in the form.
 * GO BACK BUTTON: redirects to the **WELCOME** page
-    
+#### ACTIONS
+##### SUBMIT
+This will create a new temporary user in the DB with the data introduced, and it will send a confirmation email to the user with an activation link. This link will contain at least two parameters: the user's email and a security token (stored in BD) in order to identify the user registry. This user's account won't be active until the link in the email is clicked.
+###### Validations
+* Name is blank
+* E-mail is blank, is not valid or already exists in DB.
+* Password too short (6-10 chars)
+* Repeated password is blank or mismatch.
+##### RESET
+It'll erase data from the form.
+###### Validations
+none
+##### GO BACK
+Redirects to **WELCOME** Page.
+###### Validations
+none
+
+### ACTIVATION LINK: 
+The link sent to the user's email will activate the account. The link has to be unique, embedding at least this data:
+* e-mail
+* security token
+The link will perform the necessary actions to fully activate the user.
+
+##### ACTIVATE
+Activates the user indicated as parameter. It will update the DB registry. Redirects to **USER REGISTERED** Page.
+###### Validations
+* Invalid parameters.
+* Email is not valid, or doesn't exists, or is already activated.
+* Wrong security token.
+
+------------------------------------------------
+
+
 # Entities
 * Kid
 * Reward
