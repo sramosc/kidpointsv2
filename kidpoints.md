@@ -4,26 +4,29 @@
 
 ### WELCOME Page:
 From this screen, a new user should sign up in the application, and a existing user should login.
-#### Form:
+#### FORM:
 * E-mail (text field) _required in SIGN UP_
 * Password (password field) _required in SIGN UP_
-* SIGN IN (button):  Redirects to main page if Ok. It will validate the user/pass against DB and will redirect to main page in case of success. Anyway, it will show a error message.
+* SIGN IN (button):  Redirects to main page if Ok. 
 * SIGN UP (button): Redirects to **SIGN IN** page.
 * FORGET YOUR PASSWORD (link): Redirects to **FORGET YOUR PASSWORD?** page.
-#### Validations
+#### ACTIONS
 ##### SIGN IN
+It will validate the user/pass against DB and will redirect to main page in case of success. Anyway, it will show a error message.
+####### Validations
 * Blank field/s.
 * E-mail is not valid or doesn't exists in DB.
 * Password is incorrect.
     
 ### FORGET YOUR PASSWORD Page:
-#### Form
+#### FORM
 * E-mail (text) _required_
 * SUBMIT BUTTON: It will send an automatic e-mail to the user's e-mail with the stored password
 * RESET BUTTON: It'll erase data from the form.
 * GO BACK BUTTON: Redirects to **WELCOME** Page.
 
-#### FYP validations:
+#### VALIDATIONS:
+##### SUBMIT
 * E-mail is blank, is not valid or doesn't exists in DB.
     
 ### SIGN UP Page: 
