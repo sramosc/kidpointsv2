@@ -2,7 +2,11 @@
 
 ## Functional Requirements
 
+This is a secured web application. An user has to login in order to get full access to the features.
+The first three pages (welcome, sign up and forget your password) are the only ones visible without authentication.
+
 ### WELCOME Page:
+_UNAUTHENTICATED_
 From this screen, a new user should sign up in the application, and a existing user should login.
 #### FORM:
 * E-mail (text field) _required in SIGN UP_
@@ -31,18 +35,28 @@ Redirects to **FORGET YOUR PASSWORD?** page.
 none
 
 ### FORGET YOUR PASSWORD Page:
+_UNAUTHENTICATED_
 #### FORM
 * E-mail (text) _required_
 * SUBMIT BUTTON
-* RESET BUTTON: It'll erase data from the form.
-* GO BACK BUTTON: Redirects to **WELCOME** Page.
+* RESET BUTTON
+* GO BACK BUTTON
 #### ACTIONS
 ##### SUBMIT
-It will send an automatic e-mail to the user's e-mail with the stored password
+It will send an automatic e-mail to the user's e-mail with the stored password. Redirects to **WELCOME** Page.
 ###### Validations
 * E-mail is blank, is not valid or doesn't exists in DB.
+##### RESET
+It'll erase data from the form.
+###### Validations
+none
+##### GO BACK
+Redirects to **WELCOME** Page.
+###### Validations
+none
     
 ### SIGN UP Page: 
+_UNAUTHENTICATED_
 There will be a new screen showing a form to fill with basic personal details:
 * Name (text)
 * Genre (F/M combo)    
