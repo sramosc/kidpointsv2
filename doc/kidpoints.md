@@ -2,7 +2,7 @@
 
 ## Functional Requirements
 
-This is a secured web application. An user has to login in order to get full access to the features.
+This is a secured web application. Every user has to login in order to get full access to the features.
 The first three pages (welcome, sign up and forget your password) are the only ones visible without authentication.
 
 ### WELCOME Page (_UNAUTHENTICATED_):
@@ -11,7 +11,7 @@ From this screen, a new user should sign up in the application, and a existing u
 * E-mail (text field) _required in SIGN UP_
 * Password (password field) _required in SIGN UP_
 * SIGN IN (button)
-* SIGN UP (button): 
+* SIGN UP (button):
 * FORGET YOUR PASSWORD (link)
 
 #### ACTIONS
@@ -53,8 +53,8 @@ none
 Redirects to **WELCOME** Page.
 ###### Validations
 none
-    
-### SIGN UP Page (_UNAUTHENTICATED_): 
+
+### SIGN UP Page (_UNAUTHENTICATED_):
 #### FORM
 * Name (text)
 * Genre (F/M combo)    
@@ -82,7 +82,7 @@ Redirects to **WELCOME** Page.
 ###### Validations
 none
 
-### ACTIVATION LINK: 
+### ACTIVATION LINK:
 The link sent to the user's email will activate the account. The link has to be unique, embedding at least this data:
 * e-mail
 * security token
@@ -95,6 +95,8 @@ Activates the user indicated as parameter. It will update the DB registry. Redir
 * Email is not valid, or doesn't exists, or is already activated.
 * Wrong security token.
 
+
+
 ------------------------------------------------
 
 
@@ -105,9 +107,9 @@ Activates the user indicated as parameter. It will update the DB registry. Redir
 * User
 
 # Kid:
-  The kid's entity will maintain the data of a kid. 
+  The kid's entity will maintain the data of a kid.
   It'll store all the personal data, and the list of users (parents) able to modify/manage it.
-  Every kid will have only one calendar, and a list of possible rewards. 
+  Every kid will have only one calendar, and a list of possible rewards.
   This list can be shared by two (or more) different kids if the manager users are the same.
 * Attributes
   * Name
@@ -116,11 +118,11 @@ Activates the user indicated as parameter. It will update the DB registry. Redir
   * Calendar: 1 per child.
   * Rewards: 1 list per child (can be shared by two+ kids if the users are the same)
   * Users: list of users authorized to manage the kid's data
-  * Audit Data: registry of operations 
+  * Audit Data: registry of operations
 
 # Reward:
-  A reward is merely a prize and the cost associated to it. 
-  Every user will create his/her own list of rewards. 
+  A reward is merely a prize and the cost associated to it.
+  Every user will create his/her own list of rewards.
 * Attributes
   * Name
   * Photo (optional)
