@@ -7,26 +7,39 @@ From this screen, a new user should sign up in the application, and a existing u
 #### FORM:
 * E-mail (text field) _required in SIGN UP_
 * Password (password field) _required in SIGN UP_
-* SIGN IN (button):  Redirects to main page if Ok. 
-* SIGN UP (button): Redirects to **SIGN IN** page.
-* FORGET YOUR PASSWORD (link): Redirects to **FORGET YOUR PASSWORD?** page.
+* SIGN IN (button)
+* SIGN UP (button): 
+* FORGET YOUR PASSWORD (link)
+
 #### ACTIONS
+
 ##### SIGN IN
 It will validate the user/pass against DB and will redirect to main page in case of success. Anyway, it will show a error message.
-####### Validations
+###### Validations
 * Blank field/s.
 * E-mail is not valid or doesn't exists in DB.
 * Password is incorrect.
-    
+
+##### SIGN UP
+Redirects to **SIGN UP** page.
+###### Validations
+none
+
+##### FORGET YOUR PASSWORD
+Redirects to **FORGET YOUR PASSWORD?** page.
+###### Validations
+none
+
 ### FORGET YOUR PASSWORD Page:
 #### FORM
 * E-mail (text) _required_
-* SUBMIT BUTTON: It will send an automatic e-mail to the user's e-mail with the stored password
+* SUBMIT BUTTON
 * RESET BUTTON: It'll erase data from the form.
 * GO BACK BUTTON: Redirects to **WELCOME** Page.
-
-#### VALIDATIONS:
+#### ACTIONS
 ##### SUBMIT
+It will send an automatic e-mail to the user's e-mail with the stored password
+###### Validations
 * E-mail is blank, is not valid or doesn't exists in DB.
     
 ### SIGN UP Page: 
